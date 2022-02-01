@@ -16,7 +16,11 @@ def display_game_intro():
 
 
 def choose_cave():
-    pass
+    cave = ''
+    while cave != '1' and cave != '2':
+        print('Which cave do you want to enter? (1 or 2)')
+        cave = input()
+    return cave
 
 
 def enter_cave():
@@ -25,6 +29,8 @@ def enter_cave():
 
 def main_loop():
     display_game_intro()
+    cave_input = choose_cave()
+    print('you chose cave ' + cave_input)
 
 
 main_loop()
