@@ -23,8 +23,17 @@ def choose_cave():
     return cave
 
 
-def enter_cave():
-    pass
+def enter_cave(choosen_cave):
+    print('You entered the cave.')
+    time.sleep(1)
+
+    random_cave = random.randint(1, 2)
+    print()
+
+    if random_cave == int(choosen_cave):
+        print('Lucky you! You found the chest!')
+    else:
+        print('You expected to find a chest...but you fall to your death into a spike pit :(')
 
 
 def main_loop():
